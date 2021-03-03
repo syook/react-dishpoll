@@ -31,8 +31,6 @@ Tab2: Show the dishes in the descending order of the points received from the po
 - Exception Handling: No crashes.
 - Git Commit practices: Manage your code in github and make frequent commits.
 
-### Time Duration: 2 hrs
-
 ### Submission
 Share the github repository and hosted webapp link.
 If you have any other doubts, get in touch with us
