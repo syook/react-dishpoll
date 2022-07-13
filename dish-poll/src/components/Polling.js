@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import Data from "../../database/db.json";
-import axios from "axios";
-
 import './Polling.css'
 
 
@@ -12,20 +9,12 @@ import './Polling.css'
   const [rank1, setRank1] = useState(null);
   const [rank2, setRank2] = useState(null);
   const [rank3, setRank3] = useState(null);
-  const duplicates = data;
 
 
-  var datas = data;
 
-  const onSearchhandler = (e) => {
-    let filtered = data.filter((item) =>
-      item.name.includes(e.currentTarget.value)
-    );
-    setData(filtered);
-  };
 
   useEffect(()=>{
-    const data =JSON.parse(localStorage.getItem("polldataa"));
+    const data =JSON.parse(localStorage.getItem("pollData"));
     setData(data);
   },[])
 
@@ -76,15 +65,17 @@ import './Polling.css'
     }
    
 
-   updatedPoll(rank1,30);
-     updatedPoll(rank2,20);
-     updatedPoll(rank3,10);
+   updatedPoll(rank1-1,30);
+     updatedPoll(rank2-1,20);
+     updatedPoll(rank3-1,10);
 
     // const updatedPollData = data.[first]
 
   console.log(first,second,third);
   console.log(data)
+  localStorage.removeItem("pollData");
 
+  localStorage.setItem("pollData", JSON.stringify(data))
     navigate("/result");
 
   };
@@ -135,7 +126,7 @@ import './Polling.css'
                     3
                   </button>
                 </div>
-                <img src={item.image} alt="image" />
+                <img src={item.image} alt="polling dish" />
                 <h2>{item.dishName}</h2>
                 <p>{item.description}</p>
               </div>

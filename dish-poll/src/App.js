@@ -1,4 +1,4 @@
-import React, { useEffect ,useState} from "react";
+import React, { useEffect } from "react";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./components/Login";
 import Home from "./components/Home";
@@ -7,9 +7,6 @@ import Result from './components/Result'
 
 
 
-import { useDispatch } from "react-redux";
-import {add} from "./store/PollSlice"
-
 import axios from 'axios'
 import { Routes, Route } from "react-router-dom";
 
@@ -17,14 +14,13 @@ import "./App.css";
 
 function App() {
 
-  const [data, setData] = useState("");
-  const dispatch = useDispatch();
+
 
   useEffect(() => {
     axios.get("https://raw.githubusercontent.com/syook/react-dishpoll/main/db.json")
-      .then((res) => {setData(res.data);
+      .then((res) => {
         console.log(res.data)
-        localStorage.setItem("polldataa", JSON.stringify(res.data))
+        localStorage.setItem("pollData", JSON.stringify(res.data))
       })
       }, []);
 

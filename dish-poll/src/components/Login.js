@@ -5,7 +5,7 @@ import userData from '../Db/users.json'
 import {login} from '../store/UserSlice'
 
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 
 const Login = props => {
@@ -20,7 +20,7 @@ const loginHandler = (e)=>{
   e.preventDefault();
   const userName= e.target.username.value;
   const pass = e.target.pass.value;
-  // console.log(userData)
+  console.log(userData)
   const  finduser = userData.filter(
     (item) => item.username === userName && item.password === pass
   );

@@ -5,14 +5,13 @@ import './Home.css'
 import { NavLink } from "react-router-dom";
 
 import {logout} from '../store/UserSlice'
-import { useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 
 
-function Home({name}) {
-// console.log(name);
+function Home() {
 const dispatch=useDispatch();
 
-const data = useSelector(state=> state.poll)
+
 
 // console.log(data+"its from data")
 const logoutHandler=()=>{
