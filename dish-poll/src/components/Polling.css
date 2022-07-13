@@ -1,0 +1,32 @@
+.view-container{
+    display: flex;
+    top:100px;
+    background-color: aqua;
+    align-items: center;
+    flex-direction: column;
+}
+
+.smt-btn{
+margin-top: 40px;
+width:200px;
+height: 40px;
+display: block;
+background-color: black;
+color: white;
+border-radius: 10px;
+}
+
+.dish{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+
+.itemCard{
+    box-sizing: border-box;
+    padding:10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 400px;
+}

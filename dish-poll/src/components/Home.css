@@ -1,0 +1,40 @@
+.tab-container{
+    background-color: aquamarine;
+}
+
+.tabs{
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content:space-around;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.nav-link{
+    background-color:  #282c34;
+    color: white;
+    text-decoration: none;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 4px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.logout{
+    background-color:  #3867e7;
+    color: white;
+    text-decoration: none;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 4px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
