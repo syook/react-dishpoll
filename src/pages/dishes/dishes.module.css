@@ -1,0 +1,24 @@
+.DishesBox {
+  height: 100vh;
+  width: 100vw;
+}
+.nav {
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav button {
+  margin: 20px;
+}
+
+.flexCard {
+  margin: 0rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+

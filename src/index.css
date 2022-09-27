@@ -19,6 +19,8 @@ body {
   --primary-color: rgb(14, 51, 98);
   --shadow: rgba(0, 0, 0, 0.16);
   --white-color: #fff;
+  --black-color: #000;
+  --red-color: rgb(201, 14, 14);
 }
 
 .App {
