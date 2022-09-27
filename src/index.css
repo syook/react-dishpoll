@@ -8,8 +8,7 @@
 
 html {
   font-family: "Nunito", sans-serif;
-  font-size: 22px;
-  color: #fff;
+  letter-spacing: 2px;
 }
 
 body {
@@ -19,6 +18,7 @@ body {
 :root {
   --primary-color: rgb(14, 51, 98);
   --shadow: rgba(0, 0, 0, 0.16);
+  --white-color: #fff;
 }
 
 .App {
@@ -27,5 +27,4 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 1rem 0.5rem;
 }
