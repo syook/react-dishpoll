@@ -9,6 +9,7 @@ const Result = () => {
     const array = JSON.parse(localStorage.getItem("dishList"));
     setResData(array);
   }, []);
+
   return (
     <section className={styles.ResultBox}>
       <div className={styles.nav}>
@@ -32,12 +33,12 @@ const Result = () => {
             </tr>
           </thead>
           <tbody>
-            {resData.map((element, index) => {
+            {resData?.map((element, index) => {
               return (
                 <tr>
                   <td>{index + 1}</td>
                   <td>{element.dishName}</td>
-                  <td>{element.points}</td>
+                  <td>{!element.points ? 0 : element.points}</td>
                 </tr>
               );
             })}
