@@ -9,12 +9,17 @@ const Dishes = () => {
   const [rank1, setRank1] = useState(null);
   const [rank2, setRank2] = useState(null);
   const [rank3, setRank3] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigation = useNavigate();
+  
   useEffect(() => {
+    setLoading(true);
     const dishesData = async () => {
       const response = await axios.get(
         "https://raw.githubusercontent.com/syook/react-dishpoll/main/db.json"
       );
+      setLoading(false);
+
       setDishes(response.data);
       localStorage.setItem("dishList", JSON.stringify(response.data));
     };
@@ -104,18 +109,22 @@ const Dishes = () => {
         </button>
       </div>
       <div className={styles.flexCard}>
-        {dishes.map((dish) => (
-          <DishCard
-            key={dish.id}
-            {...dish}
-            rankOne={rankOne}
-            rankTwo={rankTwo}
-            rankThree={rankThree}
-            rank1={rank1}
-            rank2={rank2}
-            rank3={rank3}
-          />
-        ))}
+        {loading ? (
+          <h1>Loading...</h1>
+        ) : (
+          dishes.map((dish) => (
+            <DishCard
+              key={dish.id}
+              {...dish}
+              rankOne={rankOne}
+              rankTwo={rankTwo}
+              rankThree={rankThree}
+              rank1={rank1}
+              rank2={rank2}
+              rank3={rank3}
+            />
+          ))
+        )}
       </div>
     </div>
   );
