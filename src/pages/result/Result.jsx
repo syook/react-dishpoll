@@ -1,13 +1,16 @@
 import styles from "./results.module.css";
+import { Link } from "react-router-dom";
 
 const Result = () => {
   return (
     <section className={styles.ResultBox}>
       <div className={styles.nav}>
-        <button>
+        <Link to="/dishes" className={styles.btnLinks}>
           <i class="bx bx-left-arrow-alt"></i>Back
-        </button>
-        <button>Logout</button>
+        </Link>
+        <Link to="/" className={styles.btnLinks}>
+          Logout
+        </Link>
       </div>
       <div>
         <h1>Ranks of Dishes</h1>

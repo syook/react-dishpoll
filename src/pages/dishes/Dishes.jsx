@@ -1,13 +1,14 @@
 import { DishCard } from "./components/DishCard";
+import { Link } from "react-router-dom";
 import styles from "./dishes.module.css";
 const Dishes = () => {
   return (
     <div className={styles.DishesBox}>
       <div className={styles.nav}>
-      <button>Submit Vote</button>
-        <button>
-          <i class="bx bx-right-arrow-alt"></i>Result
-        </button>
+        <Link to="/home" className={styles.btnLinks}>
+          <i class="bx bx-left-arrow-alt"></i>Back
+        </Link>
+        <button>Submit Vote</button>
       </div>
       <div className={styles.flexCard}>
         <DishCard />
@@ -16,12 +17,12 @@ const Dishes = () => {
         <DishCard />
         <DishCard />
         <DishCard />
-        <DishCard />
-        <DishCard />
-        <DishCard />
-        <DishCard />
-        <DishCard />
 
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
+        <DishCard />
       </div>
     </div>
   );

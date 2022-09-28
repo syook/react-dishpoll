@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.nav button {
+.nav .btnLinks {
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -20,6 +20,7 @@
   padding: 8px 10px;
   margin-top: 1.5rem;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 h1 {

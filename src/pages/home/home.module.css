@@ -24,7 +24,7 @@ span {
   
 }
 
-.button button {
+.button .btnLinks {
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -34,6 +34,7 @@ span {
   border: none;
   padding: .5rem 1rem;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 button:hover {
