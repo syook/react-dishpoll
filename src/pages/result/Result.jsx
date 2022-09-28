@@ -45,8 +45,8 @@ const Result = () => {
                 return (
                   <tr>
                     <td>{index + 1}</td>
-                    <td>{element.dishName}</td>
-                    <td>{!element.points ? 0 : element.points}</td>
+                    <td>{element?.dishName}</td>
+                    <td>{!element?.points ? 0 : element.points}</td>
                   </tr>
                 );
               })}
