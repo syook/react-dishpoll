@@ -37,7 +37,7 @@ button {
   padding: 0.5rem;
   cursor: pointer;
   border: none;
-  font-size: 18px;
+  font-size: 15px;
   background-color: var(--white-color);
   color: var(--primary-color);
   border-radius: 5px;

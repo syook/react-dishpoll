@@ -11,6 +11,16 @@ const Login = () => {
   });
   const navigation = useNavigate();
 
+  const guestUser = {
+    username: "amar",
+    password: "amar123",
+  };
+
+  const guestUserHandler = (event) => {
+    event.preventDefault();
+    setUserCredential(guestUser);
+  };
+
   const changeHandler = (event) => {
     setUserCredential({
       ...userCredential,
@@ -28,7 +38,7 @@ const Login = () => {
     });
 
     if (!userExist) {
-      alert("User Not Found");
+      toast.error("User Not Found");
     } else {
       navigation("/home");
       toast.success("Successfully Logged In");
@@ -37,14 +47,15 @@ const Login = () => {
   return (
     <section className={styles.loginSection}>
       <span className={styles.loginHeading}>Login</span>
-      <form className={styles.loginForm} onSubmit={submitHandler}>
+      <form className={styles.loginForm}>
         <input
           type="text"
           id="username"
           name="username"
           autoComplete="off"
           required
-          placeholder="amar"
+          placeholder="Username"
+          value={userCredential.username}
           onChange={changeHandler}
         />
         <input
@@ -52,10 +63,12 @@ const Login = () => {
           id="password"
           name="password"
           required
-          placeholder="amar123"
+          placeholder="Password"
+          value={userCredential.password}
           onChange={changeHandler}
         />
-        <button>Login</button>
+        <button onClick={guestUserHandler}>Add Guest Credential</button>
+        <button onClick={submitHandler}>Login</button>
       </form>
     </section>
   );
