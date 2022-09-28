@@ -1,23 +1,14 @@
 import styles from "./dishcard.module.css";
 
-const DishCard = () => {
+const DishCard = ({ id, dishName, description, image }) => {
   return (
-    <section className={styles.dishCard}>
+    <section className={styles.dishCard} key={id}>
       <div className={styles.dishCardImgBox}>
-        <img
-          src="https://images.unsplash.com/photo-1664261910581-ac3334994d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt=""
-          className={styles.dishCardImg}
-        />
+        <img src={image} alt={dishName} className={styles.dishCardImg} />
       </div>
       <div className={styles.dishCardDetails}>
-        <h5 className={styles.dishCardtitle}>Title Tile</h5>
-        <p className={styles.dishCardContent}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit enim
-          optio minus quod quos aspernatur consectetur rerum voluptatibus saepe
-          esse! Cum sequi porro maiores alias quidem voluptatum debitis corrupti
-          eveniet.
-        </p>
+        <h5 className={styles.dishCardtitle}>{dishName}</h5>
+        <p className={styles.dishCardContent}>{description}</p>
       </div>
       <div className={styles.voteBtn}>
         <button>1</button>
