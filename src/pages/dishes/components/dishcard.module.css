@@ -40,10 +40,17 @@
   gap: 10px;
 }
 
-.voteBtn button {
+.voteBtn .notActiveBtn {
   padding: 5px 10px;
   color: var(--white-color);
   background-color: var(--red-color);
+  border-radius: 7px;
+}
+
+.voteBtn .activeBtn {
+  padding: 5px 10px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
   border-radius: 7px;
 }
 
@@ -53,14 +60,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-   .dishCard{
+  .dishCard {
     width: 15rem;
-   } 
+  }
 }
 
- @media screen and (max-width: 575px) {
-    .dishCard{
-     width: 29rem;
-    } 
- }
- 
+@media screen and (max-width: 575px) {
+  .dishCard {
+    width: 29rem;
+  }
+}
