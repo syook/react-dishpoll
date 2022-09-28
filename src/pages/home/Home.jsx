@@ -7,11 +7,6 @@ const Home = () => {
         <button>Start Voting</button>
         <button>Show Results</button>
       </div>
-      {/* <div className={styles.logoutButton}>
-        <button className={styles.logout}>
-          <i class="bx bx-log-out-circle"></i>
-        </button>
-      </div> */}
     </section>
   );
 };
