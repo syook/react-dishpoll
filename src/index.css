@@ -29,5 +29,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
- 
+}
+.Toastify__toast {
+  font-size: .8rem;
 }

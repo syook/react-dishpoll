@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
+import { toast } from "react-toastify";
 const users = require("../../db/users.json");
 
 const Login = () => {
@@ -29,8 +30,8 @@ const Login = () => {
     if (!userExist) {
       alert("User Not Found");
     } else {
-      alert("LoggedIn Successfully");
       navigation("/home");
+      toast.success("Successfully Logged In");
     }
   };
   return (
@@ -43,7 +44,7 @@ const Login = () => {
           name="username"
           autoComplete="off"
           required
-          placeholder="Username"
+          placeholder="amar"
           onChange={changeHandler}
         />
         <input
@@ -51,7 +52,7 @@ const Login = () => {
           id="password"
           name="password"
           required
-          placeholder="Password"
+          placeholder="amar123"
           onChange={changeHandler}
         />
         <button>Login</button>
