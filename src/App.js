@@ -1,15 +1,15 @@
-import { Dishes } from "./pages/dishes/Dishes";
-import { Home } from "./pages/home/Home";
-import { Login } from "./pages/login/Login";
-import { Result } from "./pages/result/Result";
+import { Home, Dishes, Login, Result } from "./pages/index";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      {/* <Login/> */}
-      <Home/>
-      {/* <Dishes/> */}
-      {/* <Result/> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dishes" element={<Dishes />} />
+        <Route path="/results" element={<Result />} />
+      </Routes>
     </div>
   );
 }
