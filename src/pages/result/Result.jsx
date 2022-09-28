@@ -1,7 +1,14 @@
 import styles from "./results.module.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Result = () => {
+  const [resData, setResData] = useState(null);
+
+  useEffect(() => {
+    const array = JSON.parse(localStorage.getItem("dishList"));
+    setResData(array);
+  }, []);
   return (
     <section className={styles.ResultBox}>
       <div className={styles.nav}>
@@ -25,21 +32,15 @@ const Result = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Palak</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Palak</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Palak</td>
-              <td>10</td>
-            </tr>
+            {resData.map((element, index) => {
+              return (
+                <tr>
+                  <td>{index + 1}</td>
+                  <td>{element.dishName}</td>
+                  <td>{element.points}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
