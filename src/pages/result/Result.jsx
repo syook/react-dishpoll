@@ -4,8 +4,13 @@ import { useEffect, useState } from "react";
 
 const Result = () => {
   const [resData, setResData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
     const array = JSON.parse(localStorage.getItem("dishList"));
     setResData(array);
   }, []);
@@ -24,26 +29,30 @@ const Result = () => {
         <h1>Ranks of Dishes</h1>
       </div>
       <div className={styles.tableDiv}>
-        <table>
-          <thead>
-            <tr className={styles.colum}>
-              <th scope="col">Rank</th>
-              <th scope="col">Dish</th>
-              <th scope="col">Points</th>
-            </tr>
-          </thead>
-          <tbody>
-            {resData?.map((element, index) => {
-              return (
-                <tr>
-                  <td>{index + 1}</td>
-                  <td>{element.dishName}</td>
-                  <td>{!element.points ? 0 : element.points}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        {loading ? (
+          <h1>Loading...</h1>
+        ) : (
+          <table>
+            <thead>
+              <tr className={styles.colum}>
+                <th scope="col">Rank</th>
+                <th scope="col">Dish</th>
+                <th scope="col">Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              {resData?.map((element, index) => {
+                return (
+                  <tr>
+                    <td>{index + 1}</td>
+                    <td>{element.dishName}</td>
+                    <td>{!element.points ? 0 : element.points}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
       </div>
     </section>
   );
