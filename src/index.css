@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+:root {
+  --primary-color: rgb(14, 51, 98);
+  --shadow: rgba(0, 0, 0, 0.16);
+  --white-color: #fff;
+  --black-color: #000;
+  --red-color: rgb(201, 14, 14);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Toastify__toast {
+  font-size: .8rem;
+}

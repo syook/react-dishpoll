@@ -1,0 +1,44 @@
+.loginSection {
+  width: 100%;
+  max-width: 320px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow) 0px 1px 4px;
+  border-radius: 5px;
+}
+
+.loginHeading {
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--white-color);
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-size: 15px;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+}
